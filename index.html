@@ -9,7 +9,16 @@
   <!-- /My css -->
 </head>
 <body>
-  <div id="app">{{ message }}</div>
+  <div id="app" v-cloak>
+    <div class="container">
+      <h1>Vue Email List</h1>
+      <ul class="email-list">
+        <li>abaco@gmail.it</li>
+        <li>abaco@gmail.it</li>
+        <li>abaco@gmail.it</li>
+      </ul>
+    </div>
+  </div>
 
   <!-- Vue js -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
