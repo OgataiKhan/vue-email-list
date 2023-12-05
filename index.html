@@ -13,13 +13,16 @@
     <div class="container">
       <h1>Vue Email List</h1>
       <ul class="email-list">
-        <li>abaco@gmail.it</li>
-        <li>abaco@gmail.it</li>
-        <li>abaco@gmail.it</li>
+        <li v-for="email in emails">
+          <a href="#">{{ email }}</a>
+        </li>
       </ul>
     </div>
   </div>
 
+  <!-- Axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- /Axios -->
   <!-- Vue js -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <!-- /Vue js -->

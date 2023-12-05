@@ -5,7 +5,15 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      message: 'Hello Vue!'
+      apiUrl: 'https://flynn.boolean.careers/exercises/api/random/mail',
+      emails: [],
+    }
+  },
+  created() {
+    for (let i = 0; i < 10; i++) {
+      axios.get(this.apiUrl).then((response) => {
+        this.emails.push(response.data.response);
+      })
     }
   }
 }).mount('#app');
